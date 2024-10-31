@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banking Details</title>
+    <title>Personal Details & Bank Info</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <form id="signup2" action="finalize-signup.html" method="post" novalidate>
+        <h2>Personal Details & Banking info</h2>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <span class="error-message" id="dobError">Please enter your date of birth.</span>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <span class="error-message" id="phoneError">Please enter a valid phone number</span>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <span class="error-message" id="addressError">Please enter your address</span>
+        <label for=""></label>
+        <input type="text">
+        <span class="error-message"></span>
+        <label for=""></label>
+        <input type="text">
+        <span class="error-message"></span>
+        <label for=""></label>
+        <input type="text">
+        <span class="error-message"></span>
+        <label for=""></label>
+        <input type="text">
+        <span class="error-message"></span>
+        
+        <button type="submit">Complete Signup</button>
+    </form>
+    <script src="scripts.js"></script>
 </body>
 </html>
