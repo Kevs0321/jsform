@@ -18,8 +18,9 @@
     </nav>
     <main>
         <form>
-            <h2>Personal Info</h2>
+
         <fieldset id="pinfo">
+            <legend>Personal Information</legend>
             <div>
                 <label for="firstname">First Name:</label>
                 <input type="text" id="firstname" name="firstname" maxlength="30" placeholder="Enter your first name" required>
@@ -83,6 +84,7 @@
         </fieldset>
 
         <fieldset id="finfo">
+            <legend>Bank Information</legend>
             <div>
                 <label for="income">Annual Income:</label>
                 <input type="text" id="income" name="income" placeholder="Enter your annual income" required>
@@ -98,6 +100,7 @@
         </fieldset>
         
         <fieldset id="invprofile">
+            <legend>Investment Profile</legend>
             <div>
                 <label for="exp">Investment Experience:</label>
                 <select id="exp" name="exp" required>
@@ -135,6 +138,7 @@
         </fieldset>
 
         <fieldset id="terms">
+            <legend>Terms and Conditions</legend>
             <div>
                 <input type="checkbox" name="agree" id="agree" required>
                 <label for="agree">I agree to the terms and conditions</label>
