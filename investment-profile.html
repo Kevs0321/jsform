@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypta Investment Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <nav class="topnav">
+        <a class="clogo" href="#"><img src="./Assets/crypta.png" alt="Crypta Logo"></a>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contacts">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <fieldset id="invprofile">
+            <legend>Investment Profile</legend>
+            <div>
+                <label for="exp">Investment Experience:</label>
+                <select id="exp" name="exp" required>
+                    <option value="">Select your experience</option>
+                    <option value="low">Low (0-1 year)</option>
+                    <option value="medium">Medium(1-3 years)</option>
+                    <option value="high">High(more than 5 years)</option>
+                </select>
+            </div>
+            <div>
+                <label for="risk">Risk Tolerance:</label>
+                <select id="risk" name="risk" required>
+                    <option value="">Select risk tolerance</option>
+                    <option value="low">Low (more stable)</option>
+                    <option value="medium">Medium (balanced risk/reward)</option>
+                    <option value="high">High (potential loss)</option>
+                </select>
+            </div>
+            <div>What is your investment goal?</div>
+            <div>
+                <input type="radio" id="goal1" value="on-time" name="invstgoal" required>
+                <label for="goal1" class="radio-label">Achieving my goal by the target date is essential.</label>
+            </div>
+            <div>
+                <input type="radio" id="goal2" value="goal-by-date" name="invstgoal" required>
+                <label for="goal2" class="radio-label">I aim to be close to my goal by the target date</label>
+            </div>
+                <input type="radio" id="goal3" value="target-date" name="invstgoal" required>
+                <label for="goal3" class="radio-label">I am open to extending my target date if needed to reach my goal.
+                </label>
+            <div>
+                <input type="radio" id="goal4" value="review-goal" name="invstgoal" required>
+                <label for="goal4" class="radio-label">I regularly review my goal and target date and am willing to adjust them based on performance.</label> 
+            </div>
+            <button type="button" id="next3">Next</button>
+        </fieldset>
+    </main>
+    <footer class="footer">
+        <a href="#home"><img height="40" src="./Assets/cryptalogo.png" alt="Footer Logo"></a>
+        <p>&copy; 2024 CRYPTA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

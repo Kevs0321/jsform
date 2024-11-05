@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypta Financial Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <nav class="topnav">
+        <a class="clogo" href="#"><img src="./Assets/crypta.png" alt="Crypta Logo"></a>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contacts">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <fieldset id="finfo">
+            <legend>Bank Information</legend>
+            <div>
+                <label for="income">Annual Income:</label>
+                <input type="text" id="income" name="income" placeholder="Enter your annual income" required>
+            </div>
+            <div>
+                <label for="account">Account Number:</label>
+                <input type="text" id="account" name="account" placeholder="1234567" maxlength="7" title="Please enter a 7 digit number" pattern="\d{7}" required>
+            </div>
+            <div>
+                <label for="transit">Bank Transit Code:</label>
+                <input type="text" id="transit" name="transit" placeholder="00001" pattern="\d{5}" maxlength="5" title="Please enter a 5 digit number" required>
+            </div>
+            <button type="button" id="next2">Next</button>
+        </fieldset>
+    </main>
+    <footer class="footer">
+        <a href="#home"><img height="40" src="./Assets/cryptalogo.png" alt="Footer Logo"></a>
+        <p>&copy; 2024 CRYPTA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
