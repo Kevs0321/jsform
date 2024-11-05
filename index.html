@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="topnav">
-        <a class="clogo" href="#"><img src="" alt="Crypta Logo"></a>
+        <a class="clogo" href="#"><img src="./Assets/cryptalogo.png" alt="Crypta Logo"></a>
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -81,6 +81,7 @@
                 <label for="postalcode">Postal Code:</label>
                 <input type="text" id="postalcode" name="postalcode" title="Canadian postal code e.g., A1A 1A1" placeholder="A1A 1A1" required>
             </div>
+            <button type="button" id="next1">Next</button>
         </fieldset>
 
         <fieldset id="finfo">
@@ -97,6 +98,7 @@
                 <label for="transit">Bank Transit Code:</label>
                 <input type="text" id="transit" name="transit" placeholder="00001" pattern="\d{5}" maxlength="5" title="Please enter a 5 digit number" required>
             </div>
+            <button type="button" id="next2">Next</button>
         </fieldset>
         
         <fieldset id="invprofile">
@@ -135,6 +137,7 @@
                 <input type="radio" id="goal4" value="review-goal" name="invstgoal" required>
                 <label for="goal4" class="radio-label">I regularly review my goal and target date and am willing to adjust them based on performance.</label> 
             </div>
+            <button type="button" id="next3">Next</button>
         </fieldset>
 
         <fieldset id="terms">
@@ -143,8 +146,13 @@
                 <input type="checkbox" name="agree" id="agree" required>
                 <label for="agree">I agree to the terms and conditions</label>
              </div>
+            <button type="submit" action="#">Submit</button>
         </fieldset>
         </form>
     </main>
+    <footer class="footer">
+        <a href="#home"><img height="40" src="./Assets/cryptafooter.png" alt="Logo"></a>
+        <p>&copy; 2024 CRYPTA. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

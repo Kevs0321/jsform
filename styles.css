@@ -35,3 +35,37 @@ legend {
     color: white;
     padding: 5px 10px;
   }
+
+  .clogo img {
+    max-height: 40px; 
+}
+
+.topnav .links li{
+    margin: 0 1rem;
+}
+
+.topnav .links {
+    list-style: none;
+    display: flex;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33845B;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.topnav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.footer {
+    background-color: #0A1710;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
