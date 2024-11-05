@@ -74,3 +74,31 @@ legend {
     padding: 1rem 0;
     text-align: center;
 }
+
+
+input, select {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+
+input:valid, select:valid {
+    border-color: green;
+}
+
+
+input:invalid, select:invalid {
+    border-color: red;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none; 
+}
+
+.error-message.active {
+    display: block; 
+}

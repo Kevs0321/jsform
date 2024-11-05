@@ -1,58 +1,62 @@
-const fieldsets = document.querySelectorAll('fieldset');
-let currentStep = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const pages = {
+      "index": "financial-info.html",
+      "financial-info": "investment-profile.html",
+      "investment-profile": "terms.html",
+      "terms": "index.html"
+  };
 
-// Hide all fieldsets except the first one
-for (let i = 1; i < fieldsets.length; i++) {
-  fieldsets[i].style.display = 'none';
-}
+  // Add event listener to each "Next" button
+  document.querySelectorAll("button[id^='next']").forEach(button => {
+      button.addEventListener("click", function (event) {
+          // Prevent navigation
+          event.preventDefault();
 
-// Function to validate the current fieldset
-function validateFieldset(fieldset) {
-  let isValid = true;
-  const inputs = fieldset.querySelectorAll('input[required]');
-  const selects = fieldset.querySelectorAll('select[required]');
+          // Validate form
+          const form = button.closest("form") || button.closest("fieldset");
+          const isValid = validateForm(form);
 
-  // Check required inputs and selects
-  for (const input of inputs) {
-    if (input.value.trim() === '') {
-      isValid = false;
-      input.classList.add('error'); // Add error class for styling
-    } else {
-      input.classList.remove('error');
-    }
+          if (isValid) {
+              // Navigate to next page if all fields are valid
+              const currentPage = getCurrentPage();
+              window.location.href = pages[currentPage];
+          }
+      });
+  });
+
+  // Validation function
+  function validateForm(form) {
+      let allValid = true;
+
+      form.querySelectorAll("input, select").forEach(input => {
+          // Create or select existing error message element
+          let errorMsg = input.parentNode.querySelector(".error-message");
+          if (!errorMsg) {
+              errorMsg = document.createElement("div");
+              errorMsg.classList.add("error-message");
+              errorMsg.innerText = "This field is required.";
+              input.parentNode.appendChild(errorMsg);
+          }
+
+          if (!input.checkValidity()) {
+              allValid = false;
+              input.classList.add("invalid");
+              input.classList.remove("valid");
+              errorMsg.classList.add("active");
+          } else {
+              input.classList.add("valid");
+              input.classList.remove("invalid");
+              errorMsg.classList.remove("active");
+          }
+      });
+
+      return allValid;
   }
 
-  for (const select of selects) {
-    if (select.value === '') {
-      isValid = false;
-      select.classList.add('error');
-    } else {
-      select.classList.remove('error');
-    }
+  // Determines the current page based on filename
+  function getCurrentPage() {
+      const path = window.location.pathname;
+      const page = path.split("/").pop().split(".")[0];
+      return page;
   }
-
-  // Additional validation logic can be added here for specific fields (e.g., email format)
-
-  return isValid;
-}
-
-// Function to move to the next fieldset
-function nextStep() {
-  if (validateFieldset(fieldsets[currentStep])) {
-    fieldsets[currentStep].style.display = 'none';
-    currentStep++;
-
-    if (currentStep < fieldsets.length) {
-      fieldsets[currentStep].style.display = 'block';
-    }
-  } else {
-    // Alert user about errors (optional)
-    alert('Please fill out all required fields in the current section.');
-  }
-}
-
-// Event listeners for next buttons
-const nextButtons = document.querySelectorAll('button[id^="next"]');
-nextButtons.forEach(button => {
-  button.addEventListener('click', nextStep);
 });
