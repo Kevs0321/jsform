@@ -56,7 +56,7 @@ input, select {
     margin: 0 1rem;
 }
 
-a:hover {
+.hover:hover {
     padding: 3px;
     color: #f95919;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
