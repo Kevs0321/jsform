@@ -11,7 +11,7 @@
 <body>
 
     <nav class="topnav">
-        <a class="clogo" href="#"><img src="./Assets/crypta.png" alt="Crypta Logo"></a>
+        <a class="clogo" href="#"><img height="40" src="./Assets/cryptalogo2.svg" alt="Crypta Logo"></a>
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,6 +20,7 @@
     </nav>
 
     <main>
+        <form action="./terms.html" id="step3">
         <fieldset id="invprofile">
             <legend>Investment Profile</legend>
             <div>
@@ -56,15 +57,16 @@
                 <input type="radio" id="goal4" value="review-goal" name="invstgoal" required>
                 <label for="goal4" class="radio-label">I regularly review my goal and target date and am willing to adjust them based on performance.</label> 
             </div>
-            <a href="financial-info.html"><button type="button" id="next2">Back</button></a>
-            <a href="terms.html"><button type="button" id="next2">Next</button></a>
+            <a href="financial-info.html" class="btn">Back</a>
+            <button type="submit" class="btn">Next</button>
         </fieldset>
+        </form>
 
     </main>
 
     <footer class="footer">
-        <a href="#home"><img height="40" src="./Assets/cryptalogo.png" alt="Footer Logo"></a>
-        <p>&copy; 2024 CRYPTA. All Rights Reserved.</p>
+        <a href="#home"><img height="40" src="./Assets/crypta2.svg" alt="Footer Logo"></a>
+        <p>&copy; 2024 CRYPTA.</p>
     </footer>
 
 </body>

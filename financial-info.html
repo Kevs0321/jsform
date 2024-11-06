@@ -11,7 +11,7 @@
 <body>
 
     <nav class="topnav">
-        <a class="clogo" href="#"><img src="./Assets/crypta.png" alt="Crypta Logo"></a>
+        <a class="clogo" href="#"><img height="40" src="./Assets/cryptalogo2.svg" alt="Crypta Logo"></a>
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,11 +20,16 @@
     </nav>
 
     <main>
+        <form action="./investment-profile.html" id="step2">
         <fieldset id="finfo">
             <legend>Bank Information</legend>
             <div>
                 <label for="income">Annual Income:</label>
                 <input type="text" id="income" name="income" placeholder="Enter your annual income" required>
+            </div>
+            <div>
+                <label for="bankname">Bank Name:</label>
+                <input type="text" id="bankname" name="bankname" placeholder="Enter your bank name" title="Please enter your bank name" required>
             </div>
             <div>
                 <label for="account">Account Number:</label>
@@ -34,14 +39,15 @@
                 <label for="transit">Bank Transit Code:</label>
                 <input type="text" id="transit" name="transit" placeholder="00001" pattern="\d{5}" maxlength="5" title="Please enter a 5 digit number" required>
             </div>
-            <a href="index.html"><button type="button" id="next2">Back</button></a>
-            <a href="investment-profile.html"><button type="button" id="next2">Next</button></a>
+            <a href="index.html" class="btn">Back</a>
+            <button type="submit" class="btn">Next</button>
         </fieldset>
+        </form>
     </main>
 
     <footer class="footer">
-        <a href="#home"><img height="40" src="./Assets/cryptalogo.png" alt="Footer Logo"></a>
-        <p>&copy; 2024 CRYPTA. All Rights Reserved.</p>
+        <a href="#home"><img height="40" src="./Assets/crypta2.svg" alt="Footer Logo"></a>
+        <p>&copy; 2024 CRYPTA.</p>
     </footer>
 
 </body>

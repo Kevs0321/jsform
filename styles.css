@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 main {
     padding: 1rem;
     flex: 1;
@@ -16,10 +17,6 @@ main {
     flex-direction: column;
     align-items: center;
     
-}
-
-legend {
-    background-color: #0A1710;
 }
 
 form {
@@ -36,14 +33,22 @@ div:not(div div, div.logo) {
     margin-bottom
     : 2rem;
 }
+
 legend {
     background-color: gray;
     color: white;
     padding: 5px 10px;
-  }
+}
+
+input, select {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 5px;
+}
 
 .clogo img {
-    max-height: 40px; 
+    max-height: 40px;
+    margin: 1rem; 
 }
 
 .topnav .links li{
@@ -76,30 +81,35 @@ legend {
     text-align: center;
 }
 
-
-input, select {
-    border: 1px solid #ccc;
-    padding: 8px;
-    margin-bottom: 5px;
+.valid-input {
+    border-color: #33845B;
+    border-width: 2px;
 }
 
-
-input:valid, select:valid {
-    border-color: green;
+.error-input {
+    border-color: #f95919;
+    border-width: 3px;
 }
 
-
-input:invalid, select:invalid {
-    border-color: red;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #f95919; 
+    text-decoration: none; 
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-.error-message {
-    color: red;
-    font-size: 12px;
-    display: none; 
+.btn:hover {
+    background-color: #33845B; 
 }
 
-.error-message.active {
-    display: block; 
+@media  (max-width: 600px) {
+    .topnav ul.links {
+      display: none;
+    }
 }
