@@ -1,15 +1,21 @@
-const requiredFields = document.querySelectorAll('input[required], select[required]');
+const fieldsToValidate = document.querySelectorAll('input[required], select[required]');
 
-requiredFields.forEach(input => {
-    input.addEventListener('focusout', event => {
+fieldsToValidate.forEach(field => {
+    field.addEventListener('blur', (e) => {
+        const isValid = field.checkValidity();
         
-        event.target.value ? input.classList.remove('error-input') : input.classList.add('error-input');
-        if (input.checkValidity()) {
-            input.classList.remove('error-input');
-            input.classList.add('valid-input')
+       
+        if (e.target.value) {
+            field.classList.remove('error-input');
         } else {
-            input.classList.remove('valid-input');
-            input.classList.add('error-input')
+            field.classList.add('error-input');
+        }
+        if (isValid) {
+            field.classList.remove('error-input');
+            field.classList.add('valid-input');
+        } else {
+            field.classList.remove('valid-input');
+            field.classList.add('error-input');
         }
     });
 });
