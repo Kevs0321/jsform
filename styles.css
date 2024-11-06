@@ -28,6 +28,7 @@ fieldset {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     padding: 1rem 2rem 2rem 2rem;
 }
+
 div:not(div div, div.logo) {
     margin-top: 2rem;
     margin-bottom
