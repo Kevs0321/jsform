@@ -51,8 +51,14 @@ input, select {
     margin: 1rem; 
 }
 
-.topnav .links li{
+.topnav .links li {
     margin: 0 1rem;
+}
+
+a:hover {
+    padding: 3px;
+    color: #f95919;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .topnav .links {
@@ -68,7 +74,7 @@ input, select {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.topnav .logo a {
+.topnav .logo {
     color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
