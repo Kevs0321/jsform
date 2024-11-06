@@ -115,6 +115,10 @@ a:hover {
     background-color: #33845B; 
 }
 
+.text-area {
+    width: 30ch;
+}
+
 @media  (max-width: 600px) {
     .topnav ul.links {
       display: none;
